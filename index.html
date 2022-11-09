@@ -16,7 +16,9 @@
       height: 40px;
     }
 
-    div.background {
+    div.player-buttons {
+      display: flex;
+      flex-direction: row;
       background-color: black;
     }
 
@@ -29,6 +31,10 @@
       box-shadow: 0 0 10px rgba(0,0,0,1);
     }
 
+    div.player-buttons-spacer{
+      flex-grow: 1;
+    }
+
     div.player-video-panel{
       flex-grow: 1;
     }
@@ -38,7 +44,7 @@
   <div id="player" class="player">
     <div class="js-video-container player-video-panel"></div>
     
-    <div class="background">
+    <div class="player-buttons">
       <button class="js-play-button">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
@@ -50,6 +56,10 @@
       </button>
       <button class="js-mute-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+      <div class="player-buttons-spacer"></div>
+      <button class="js-fullscreen-button">
+        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
       </button>
     </div>
   </div>
