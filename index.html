@@ -4,14 +4,16 @@
   <meta charset="utf-8">
   <title>Пример подключения плеера</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     .player .player-buttons .icon-button {
       border-style: none;
       cursor: pointer;
       color: white;
       background-color: transparent;
-      margin-bottom: 6px;
-      margin-left: 1px;
+      font-size: 13px;
     }
 
     .player .player-buttons .icon-button-volume {
@@ -19,8 +21,8 @@
       cursor: pointer;
       color: white;
       background-color: transparent;
-      margin-bottom: 6px;
       margin-left: 1px;
+      font-size: 13px;
     }
 
     .player .player-buttons .icon-button-expand {
@@ -28,7 +30,7 @@
       cursor: pointer;
       color: white;
       background-color: transparent;
-      margin-bottom: 6px;
+      font-size: 13px;
     }
 
     .player .player-buttons {
@@ -50,6 +52,15 @@
     .player .player-buttons .player-buttons-spacer{
       flex-grow: 1;
       align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .player .player-buttons .player-buttons-spacer .player-duration{
+      display: inline-block;
+      font-family: 'Roboto';
+      color: white;
+      font-size: 11px;
     }
 
     .player .player-video-panel{
@@ -75,7 +86,10 @@
       <button class="js-mute-button icon-button-volume" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <div class="player-buttons-spacer"></div>
+      <div class="player-buttons-spacer">
+        <span class="js-current-time player-duration"></span>
+        <span class="js-duration player-duration"></span>
+      </div>
       <button class="js-fullscreen-button icon-button-expand">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
