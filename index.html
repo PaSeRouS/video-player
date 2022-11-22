@@ -10,9 +10,25 @@
       cursor: pointer;
       color: white;
       background-color: transparent;
-      font-size: 24px;
-      width: 40px;
-      height: 40px;
+      margin-bottom: 6px;
+      margin-left: 1px;
+    }
+
+    .player .player-buttons .icon-button-volume {
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      margin-bottom: 6px;
+      margin-left: 1px;
+    }
+
+    .player .player-buttons .icon-button-expand {
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      margin-bottom: 6px;
     }
 
     .player .player-buttons {
@@ -23,8 +39,8 @@
     }
 
     .player {
-      width: 800px;
-      height: 600px;
+      width: 533px;
+      height: 400px;
       display: flex;
       line-height: 2.5;
       flex-direction: column;
@@ -53,15 +69,15 @@
       <button class="js-pause-button icon-button" hidden>
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button icon-button">
+      <button class="js-volume-button icon-button-volume">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button icon-button" hidden>
+      <button class="js-mute-button icon-button-volume" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
       <div class="player-buttons-spacer"></div>
-      <button class="js-fullscreen-button icon-button">
-        <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+      <button class="js-fullscreen-button icon-button-expand">
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   </div>
