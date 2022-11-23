@@ -21,7 +21,7 @@
       cursor: pointer;
       color: white;
       background-color: transparent;
-      margin-left: 1px;
+      margin-left: 2px;
       font-size: 13px;
     }
 
@@ -54,6 +54,7 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
+      margin-left: 1px;
     }
 
     .player .player-buttons .player-buttons-spacer .player-duration{
@@ -66,6 +67,36 @@
     .player .player-video-panel{
       flex-grow: 1;
       align-items: center;
+    }
+
+    .progress-bar{
+      background-color: red;
+    }
+
+    .player-controls-progressbar{
+      flex-grow: 1;
+      margin: 0px 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .player-controls-progressbar > *{
+      display: inline-block;
+      background-color: #f8104d;
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    .player-controls-slider{
+      display: inline-block;
+      margin-left: -4px;
+      width: 7px;
+      height: 7px;
+      border-style: solid;
+      border-radius: 7px;
+      border-width: 3px;
+      border-color: white;
+      background-color: #f8104d;
     }
   </style>
 </head>
@@ -88,6 +119,10 @@
       </button>
       <div class="player-buttons-spacer">
         <span class="js-current-time player-duration"></span>
+        <div class="js-progress player-controls-progressbar">
+          <div class="js-progress-slider"></div>
+          <div class="player-controls-slider"></div>
+        </div>
         <span class="js-duration player-duration"></span>
       </div>
       <button class="js-fullscreen-button icon-button-expand">
